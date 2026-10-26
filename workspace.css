@@ -1,0 +1,2 @@
+.layout-card,.layout-card[data-size]{grid-row:span var(--card-rows,6);height:auto}
+@media(max-width:850px){.layout-card,.layout-card[data-size]{grid-row:auto}}

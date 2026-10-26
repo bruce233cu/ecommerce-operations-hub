@@ -1,0 +1,50 @@
+/* Comfortable keyword cards: real content width decides density, not screen resolution. */
+#keyword-view #root-grid{grid-template-columns:repeat(var(--root-columns,3),minmax(0,1fr));gap:14px;align-items:stretch}
+#keyword-view .root-frame{padding:18px 20px}
+#keyword-view .root-item{min-width:0;display:flex;flex-direction:column;border-color:#dce4e9;border-radius:11px;box-shadow:0 1px 3px #18283b05}
+#keyword-view .root-card{padding:16px;gap:13px;flex:1}
+#keyword-view .card-top{min-height:43px;align-items:flex-start;gap:12px}
+#keyword-view .root-name{align-items:flex-start;gap:7px;min-width:0;flex:1}
+#keyword-view .root-name strong{font-size:16px;line-height:1.4;font-weight:700;color:#23384b;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+#keyword-view .rank{font-size:11px;color:#748598;line-height:22px;font-weight:500}
+#keyword-view .card-top-right{gap:7px;align-items:center;padding-top:1px}
+#keyword-view .score-row{font-size:11px;padding:3px 6px;gap:4px;background:#faf3e6;color:#856124}
+#keyword-view .score-row b{font-size:16px;line-height:1.3;color:#93671e}
+#keyword-view .selection-check{height:17px;width:17px;font-size:11px;border-color:#b8c9ce}
+#keyword-view .growth-row{display:grid;grid-template-columns:minmax(0,1fr);gap:7px;width:100%}
+#keyword-view .growth{display:flex;flex-direction:row;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 10px;font-size:12px;line-height:1.4;min-width:0;width:100%;white-space:normal;border-radius:6px;color:#52687a;background:#f6f8fa;border:1px solid #e1e8ec}
+#keyword-view .growth b{font-size:15px;line-height:1.35;font-weight:700;letter-spacing:0;white-space:normal;overflow-wrap:anywhere;text-align:right;color:#52687a}
+#keyword-view .growth.up{background:#eff8f3;border-color:#d7eadf}#keyword-view .growth.up b{color:#087558}
+#keyword-view .growth.down{background:#fdf3f2;border-color:#f0ddda}#keyword-view .growth.down b{color:#b73e45}
+#keyword-view .growth.missing b{color:#75818d}
+#keyword-view .compact-demand{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 12px}
+#keyword-view .word-count{padding:4px 6px;font-size:11px;line-height:1.5;gap:3px;color:#365f84;background:#edf4fb;white-space:nowrap}
+#keyword-view .word-count b{font-size:14px;font-weight:700;color:#22547e}
+#keyword-view .pop-line{display:flex;flex-direction:row;align-items:baseline;gap:5px;margin-left:0;white-space:nowrap;flex-shrink:0}
+#keyword-view .pop-line>span{font-size:11px;color:#657789}
+#keyword-view .pop-line>b{font-size:14px;color:#435a6e;font-weight:600;line-height:1.4;letter-spacing:0;white-space:nowrap}
+#keyword-view .card-actions{min-height:36px;padding:6px 11px;gap:10px;background:#f8fafb;margin-top:auto}
+#keyword-view .card-actions button{font-size:11px;line-height:1.5;padding:3px;color:#586f81}
+#keyword-view .card-actions svg{width:12px;height:12px}
+#keyword-view .root-item.selected{background:#f3faf7;border-color:#14816c;box-shadow:0 0 0 1px #14816c}
+#keyword-view .root-item:hover{border-color:#91b9ac;box-shadow:0 3px 12px #183e3010}
+#keyword-view .root-card:focus-visible{outline-offset:-3px}
+#keyword-view .sorts select,#keyword-view .quick-filters button,#keyword-view #pop-min,#keyword-view .searchbox input{font-size:13px}
+#keyword-view .filter-main{gap:12px}#keyword-view .quick-filters{flex-wrap:wrap;gap:8px}
+#keyword-view .keyword-table th,#keyword-view .keyword-table td{font-size:13px}
+@media(max-width:700px){#keyword-view .root-frame{padding:14px}#keyword-view #root-grid{gap:14px}#keyword-view .root-card{padding:16px}#keyword-view .root-name strong{font-size:17px}#keyword-view .growth b{font-size:16px}#keyword-view .card-actions button{font-size:12px}}
+
+/* Balanced density: retain legible metrics, reduce excess vertical space. */
+#keyword-view .root-frame{padding:15px 18px}
+#keyword-view .root-card{padding:12px;gap:9px}
+#keyword-view .card-top{min-height:28px;gap:8px}
+#keyword-view .root-name strong{font-size:15px;line-height:1.4}
+#keyword-view .score-row{padding:2px 5px;font-size:10px}
+#keyword-view .score-row b{font-size:15px}
+#keyword-view .card-top-right{gap:5px}
+#keyword-view .growth-row{gap:5px}
+#keyword-view .growth{padding:5px 8px;font-size:12px}
+#keyword-view .growth b{font-size:14px}
+#keyword-view .compact-demand{gap:6px 8px}
+#keyword-view .card-actions{min-height:30px;padding:4px 9px}
+@media(max-width:700px){#keyword-view .root-card{padding:13px}#keyword-view .root-name strong{font-size:16px}#keyword-view .growth b{font-size:15px}}

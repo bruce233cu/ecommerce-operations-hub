@@ -1,0 +1,23 @@
+/* Auto-hide navigation opens as an overlay, preserving the reading position. */
+.nav-auto{--nav-width:184px;--nav-edge:28px}
+.nav-auto main{margin-left:var(--nav-edge)}
+.nav-auto.nav-pinned main{margin-left:calc(var(--nav-width) + var(--nav-edge))}
+.nav-shell{position:fixed;inset:0 auto 0 0;width:var(--nav-edge);z-index:60;background:#fff;border-right:1px solid var(--line)}
+.nav-shell.nav-open{width:calc(var(--nav-width) + var(--nav-edge))}
+.nav-shell .sidebar{width:var(--nav-width);padding:25px 13px;visibility:hidden;transform:translateX(-100%)}
+.nav-shell.nav-open .sidebar{visibility:visible;transform:translateX(0);box-shadow:7px 0 24px #183c3210}
+.nav-toggle{position:absolute;top:6px;left:2px;width:24px;height:34px;border:1px solid #dce7e4;border-radius:6px;background:#f8fbfa;color:#53766b;font-size:17px;display:grid;place-items:center;padding:0}
+.nav-shell.nav-open .nav-toggle{left:2px;z-index:51}
+.nav-toggle:hover{background:#e8f5f1;color:var(--brand)}
+@media(max-width:1100px) and (min-width:701px){.nav-auto{--nav-width:156px}}
+@media(max-width:700px){
+ .nav-auto{--nav-width:184px;--nav-edge:28px}
+ .nav-auto.nav-pinned main{margin-left:var(--nav-edge)}
+ .nav-shell .side-brand{padding:0 12px 30px;gap:9px}
+ .nav-shell .side-brand span{display:inline;font-size:13px}
+ .nav-shell .side-section{display:block}
+ .nav-shell .side-owner{display:flex}
+ .nav-shell .side-link{font-size:13px;justify-content:flex-start;padding:12px}
+ .nav-shell .side-link>span{font-size:19px}
+ .nav-shell .dc-new{display:inline;font-size:10px}
+}
